@@ -109,7 +109,7 @@ public class SellerFormController implements Initializable {
 		try {
 			entity = getFormData();
 			service.saveOrUpdate(entity);
-			Alerts.showAlert("Cadastrado com sucesso", "Departmamento Cadastrado com Sucesso!", null,
+			Alerts.showAlert("Cadastrado com sucesso", "Vendedor cadastrado com Sucesso!", null,
 					AlertType.INFORMATION);
 			notifyDataChangeListeners();
 			Utils.currentStage(event).close();
@@ -204,7 +204,7 @@ public class SellerFormController implements Initializable {
 
 	public void loadAssociatedObjects() {
 		if (departmentService == null) {
-			throw new IllegalStateException("A lista de Departamentos está vazia");
+			throw new IllegalStateException("A lista de Vendedor está vazia");
 		}
 		List<Department> list = departmentService.findAll();
 		obsList = FXCollections.observableArrayList(list);
